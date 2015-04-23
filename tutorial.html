@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>The Markdown Tutorial</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/sweet-alert.css">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" href="css/points.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="fullpage">
+	<div class="section intro">
+		<div class="container">
+		  <div class="row">
+			<div class="twelve columns">
+				<img src="images/01.png" alt="01" />
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="twelve columns">&nbsp;</div>
+		  </div>
+		  <div class="row">
+			<div class="twelve columns">
+				<h2>Introduction</h2>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="six columns">
+				<p>Choose where you want to begin either with one of the following buttons or by selecting a section in the vertical menu on the right.</p>
+				<p>At the beggining of each section of this tutorial, the syntax is presented highlighting some important points (you can click the points for an explanation). Then, you'll be asked to complete some exercises to practice and finally, you'll be given a set of question to explore and play with a Markdown editor.</p>
+				<p>In the final challenge, you'll be shown a scrolling text that you have to format in Markdown.</p>
+			</div>
+			<div class="six columns">
+				<p><button id="btn_everything" class="button-primary">Show me everything</button></p>
+				<p><button id="btn_advanced" class="button-primary">Show me the Github/Reddit extensions</button></p>
+				<p><button id="btn_final" class="button-primary">Take me to the final challenge!</button></p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	
+	<!-- Emphasis lesson.  -->
+	<div class="section emphasis">
+		<!-- Emphasis lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/02.png" alt="02" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Emphasis</h2>
+					<p>Text wrapped inside asterisks (<b>*</b>) and underscores (<b>_</b>) will be emphasized. Use the one you prefer.</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/01.1.png" alt="*Italics* **Bold**" />
+							<ul>
+								<li class="cd-single-point" style="top: 11%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>One asterisk (or underscore) will make the enclosed text italic.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+
+								<li class="cd-single-point" style="top: 11%;left: 80%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>The same character must be used to open and close the emphasized text.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								
+								<li class="cd-single-point" style="top: 61%;left: 4%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Two asterisks (or underscores) will make the enclosed text bold.</p>
+										<p>There must be no space between the asterisks (or underscores).</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+
+								<li class="cd-single-point" style="top: 61%;left: 78%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>There must be no space between the asterisks (or underscores).</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			  
+			</div>
+		</div>
+
+		<!-- Emphasis lesson. First exercise  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, make the words "American Oxygen" bold.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_1-1" class="editor">The music video for Rihanna's song American Oxygen depicts various moments from American history, including the inauguration of Barack Obama.</div>
+					<p><input id="ck_show_html_1-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_1-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_1-1" class="render-pad"></div>
+					<div id="html_pad_1-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Emphasis lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>You can use bold and italic in the same text at the same time. For this exercise, make the words "The New York Times Best Seller" bold and "The New York Times" italic. <i>Hint: You can also use asterisks and underscores at the same time</i>.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_1-2" class="editor">Pearl Schiff couldn't find an American publisher for her second novel after her first made The New York Times Best Seller list.</div>
+					<p><input id="ck_show_html_1-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_1-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_1-2" class="render-pad"></div>
+					<div id="html_pad_1-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Emphasis lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>If you need to use an asterisk or an underscore as a literal instead of as delimiter, use a backslash to escape it. In this exercise, convert the text <i>20% OFF</i> (in italics) to *20% OFF* (surrounded by asterisks).</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_1-3" class="editor">TODAY ONLY! Pizzas *20% OFF*</div>
+					<p><input id="ck_show_html_1-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_1-3" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_1-3" class="render-pad"></div>
+					<div id="html_pad_1-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Emphasis lesson. Fourth exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					What happens when you have more than two asterisks (or underscores)? In both sides? In just one side?<br/>
+					Is always necessary to escape an asterisk (or underscore) when you want one inside a emphasized text?<br/>
+					Emphasize a text and then add spaces around the asterisks (or underscores) and the text.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_1-4" class="editor"></div>
+					<p><input id="ck_show_html_1-4" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_1-4" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_1-4" class="render-pad"></div>
+					<div id="html_pad_1-4" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+	</div>
+	
+	<!-- Headers lesson.  -->
+	<div class="section headings">
+		<!-- Heading lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/03.png" alt="03" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Headings</h2>
+					<p>Starting a line with a hash character will make the line a header. The number of hashs corresponds to the level of the header (one to six).</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/02.1.png" alt="#Heading1 ##Heading2 ###Heading3 ####Heading4 #####Heading5 ######Heading6" />
+							<ul>
+								<li class="cd-single-point" style="top: 11%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											In fact, for heading levels one and two, Markdown supports two styles.<br/>
+											For level one you can use one hash character, or equal signs in this way:<br/>
+											Heading 1<br/>
+											=========<br/>
+											(Any number of underlining = will do).
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 11%;left: 88%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Optionally, at the end of the text, you can put more hashes to "close" the header. The closing hashes don’t need to match the number of hashes used at the beginning.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 31%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											For level two, you can also use dashes in this way:
+											Heading 2<br/>
+											---------<br/>
+											(Any number of underlining - will do).
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Headings lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Using one of the two available syntaxes, format the text "April 18, 1938" as a level two header.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_2-1" class="editor">April 18, 1938
+
+Superman made his debut in Action Comics #1.</div>
+					<p><input id="ck_show_html_2-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_2-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_2-1" class="render-pad"></div>
+					<div id="html_pad_2-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Headings lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					What happens when you have more than six hash characters at the beggining of the line?<br/>
+					What happens when you surround the formatting characters (hashers, equals signs or dashes) with spaces?<br/>
+					What happens when you use bold and italics in a header?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_2-2" class="editor"></div>
+					<p><input id="ck_show_html_2-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_2-2" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_2-2" class="render-pad"></div>
+					<div id="html_pad_2-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="section links">
+		<!-- Links lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/04.png" alt="04" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">
+					<h2>Links</h2>
+					Markdown supports two style of links: inline and reference.<br/>
+						Inline links use parentheses to put the link's URL<br/>
+						Reference links use square brackets to put a label to identify the link and then, on another line, you define the URL in this way:<br/>
+						- The same identifier used previously inside square brackets<br/>
+						- Followed by a colon<br/>
+						- Followed by at least one space<br/>
+						- Followed by the URL for the link
+					<p>
+						In both types of links, the link text is delimited by square brackets.Click on the red points to know more.<br/>
+						Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/03.1.png" alt="[Text](http://http://example.com/ \"Title\")  [Text] [id]  [id]: http://example.com/  \"Title\"" />
+							<ul>
+								<li class="cd-single-point" style="top: 12%;left: 42%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											You can also use relative URLs (like /example.html)
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 12%;left: 78%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											The title of the link is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 36%;left: 12%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Optionally use a space to separate the sets of brackets.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											This definition can be placed anywhere in the document (generally in the footer).
+										</p>
+										<p>Definition identifiers may consist of letters, numbers, spaces, and punctuation. They are not case sensitive.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 72%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											The title of the link is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Link the text "University of Rwanda" to http://www.ur.ac.rw</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_3-1" class="editor">The University of Rwanda was formed in 2013 through the merger of Rwanda's seven public institutions of higher education.</div>
+					<p><input id="ck_show_html_3-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_3-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-1" class="render-pad"></div>
+					<div id="html_pad_3-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Link the words "hurricane" to http://en.wikipedia.org/w/index.php?title=Hurricane with one reference link.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_3-2" class="editor">Hurricane Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic hurricane season.</div>
+					<p><input id="ck_show_html_3-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_3-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-2" class="render-pad"></div>
+					<div id="html_pad_3-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Can you really place the link definition of a reference link anywhere?<br/>
+					Test for yourself if the link identifier of a reference link is not case sensitive<br/>
+					Can you use bold and italics in a link? Or turn a header into a link?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_3-3" class="editor"></div>
+					<p><input id="ck_show_html_3-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_3-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-3" class="render-pad"></div>
+					<div id="html_pad_3-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="section images">
+		<!-- Images lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/05.png" alt="05" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Images</h2>
+					<p>Images have the same syntax that links. The only difference is that an image definitions starts with exclamation point (!). One limitation is that Markdown has no syntax for specifying the dimensions of the image.</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/04.1.png" alt="![Alt Text](http://example.com/i.jpg \"Title\")  ![Alt Text]  [id]  [id]:http://example.com/img.jpg  \"Title\"" />
+							<ul>
+								<li class="cd-single-point" style="top: 12%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											The "Alt Text" refers to the text displayed when the image can't be shown or for the visually impaired.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 12%;left: 42%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											You can also use relative URLs (like /i.jpg)
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 12%;left: 78%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											The title of the image is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 39%;left: 18%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Optionally use a space to separate the sets of brackets.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											This definition can be placed anywhere in the document (generally in the footer).
+										</p>
+										<p>Definition identifiers may consist of letters, numbers, spaces, and punctuation. They are not case sensitive.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 72%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											The title of the image is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Images lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Display the Wikipedia logo (http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png) with the alt text and title "Wikipedia".</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_4-1" class="editor">http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png</div>
+					<p><input id="ck_show_html_4-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_4-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_4-1" class="render-pad"></div>
+					<div id="html_pad_4-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Images lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Can you create an image without specifying the alt text?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_4-2" class="editor"></div>
+					<p><input id="ck_show_html_4-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_4-2" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_4-2" class="render-pad"></div>
+					<div id="html_pad_4-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="section code">
+		<!-- Code lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/06.png" alt="06" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Code</h2>
+					<p>In a normal line, if you want to format text as code, wrap it with backtick quotes (`).</p>
+					<p>Code blocks are produced by indenting every line of the block by at least 4 spaces or 1 tab.</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/05.1.png" alt="Inline `code`  This is a code block (each line is idented by at least 4 spaces or 1 tab)" />
+							<ul>
+								<li class="cd-single-point" style="top: 14%;left: 62%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											 To include a literal backtick character within a code span, you can use multiple backticks as the opening and closing delimiters:<br/>
+											 ``A literal backtick (`).``
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 61%;left: 22%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											Remember, one level of indentation in a code block equals 4 spaces or 1 tab.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 82%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											A code block continues until it reaches a line that is not indented.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Code lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the text "c=a+++++b;" as inline code.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_5-1" class="editor">What's the result of c=a+++++b;?</div>
+					<p><input id="ck_show_html_5-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_5-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_5-1" class="render-pad"></div>
+					<div id="html_pad_5-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Code lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the last three lines as a code block.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_5-2" class="editor">Try this:
+
+a^=b;
+b^=a;
+a^=b;</div>
+					<p><input id="ck_show_html_5-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_5-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_5-2" class="render-pad"></div>
+					<div id="html_pad_5-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Code lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Create a code block with many levels of indentation<br/>
+					Can you format text (like bold and italics) inside a code block?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_5-3" class="editor"></div>
+					<p><input id="ck_show_html_5-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_5-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_5-3" class="render-pad"></div>
+					<div id="html_pad_5-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="section blockquotes">
+		<!-- Blockquotes lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/07.png" alt="07" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Blockquotes</h2>
+					<p>To create a blockquote, just start a line with the "greater than" character (&gt;) followed by a space (this is optional) and the text.<br/>
+					Blockquotes can be nested by adding additional levels of &gt;. They can also contain other Markdown formatting elements.</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/06.1.png" alt=">First line of quoting >>Nested >Last line of quoting" />
+							<ul>
+								<li class="cd-single-point" style="top: 35%;left: 9%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-right">
+										<p>
+											To ensure that the entire blockquote is grouped together, blank lines inside the quote must contain the "greater than" character.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 88%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											Optionally, you can place the "greater than" character followed by a space on each line of the quote. 
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Blockquotes lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Make the following text a blockquote. Nest the quote "Somewhere, something incredible is waiting to be known."</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_6-1" class="editor">The quote:
+
+"Somewhere, something incredible is waiting to be known"
+
+Has been ascribed to Carl Sagan.
+</div>
+					<p><input id="ck_show_html_6-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_6-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-1" class="render-pad"></div>
+					<div id="html_pad_6-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Blockquotes lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the text as a blockquote and the code inside as a code block.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_6-2" class="editor">JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=. The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:
+
+'' == '0'           // false
+0 == ''             // true
+0 == '0'            // true
+
+false == 'false'    // false
+false == '0'        // true
+
+false == undefined  // false
+false == null       // false
+null == undefined   // true</div>
+					<p><input id="ck_show_html_6-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_6-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-2" class="render-pad"></div>
+					<div id="html_pad_6-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Blockquotes lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Use more formatting elements (like headers) inside a blockquote.<br/>
+					Add many levels of &gt;</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_6-3" class="editor"></div>
+					<p><input id="ck_show_html_6-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_6-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-3" class="render-pad"></div>
+					<div id="html_pad_6-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="section paragraphs">
+		<!-- Paragraphs lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/08.png" alt="08" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Paragraphs</h2>
+					<p>A paragraph in Markdown is made by separating consecutive lines of text with one or more blank lines. This is known as a hard break.</p>
+					<p>To create a line break, you need to end a line with two or more spaces. Just typing return won't do it. This is known as a soft break.</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/07.1.png" alt="This is a paragraph line.\n\nThis is the second paragraph.\n\nThis is a line\nbreak." />
+							<ul>
+								<li class="cd-single-point" style="top: 25%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-right">
+										<p>
+											A blank line is any line without text or a line containing nothing but spaces or tabs.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 69%;left: 54%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											There are two spaces here.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Paragraphs lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Organize the following two sentences into two paragraphs.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_7-1" class="editor">Actress Amy Adams has been nominated five times for an Academy Award.265 million people kick a football in association football matches every year.</div>
+					<p><input id="ck_show_html_7-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_7-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_7-1" class="render-pad"></div>
+					<div id="html_pad_7-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Paragraphs lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format these lines of "The Road Not Taken" by Robert Frost so they look like in the Markdown editor.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_7-2" class="editor">Two roads diverged in a yellow wood,
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could
+To where it bent in the undergrowth</div>
+					<p><input id="ck_show_html_7-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_7-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_7-2" class="render-pad"></div>
+					<div id="html_pad_7-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Paragraphs lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Use formatting elements (like inline code) inside a paragraph.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_7-3" class="editor"></div>
+					<p><input id="ck_show_html_7-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_7-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_7-3" class="render-pad"></div>
+					<div id="html_pad_7-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="section lists">
+		<!-- List lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/09.png" alt="09" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>List</h2>
+					<p>
+						There are two types of list:<br/>
+						Unordered lists use asterisks, pluses, or hyphens as list markers.<br/>
+						Ordered lists use numbers followed by periods.
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/08.1.png" alt="* First item\n* Second item\n* Third item\n\n1. First item\n2. Second item\n3. Third item." />
+							<ul>
+								<li class="cd-single-point" style="top: 9%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>There's a space after the asterisk (or plus sign or hypen).</p>
+										<p>You can use asterisks, plus signs and hypens interchangable.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 58%;left: 5%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											Ordered lists start with a number followed by a period and a space.<br/> If you don't want this behaviour, you can escape the period:<br/>
+											12\. An even number.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 1%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											You don't have to use ordered numbers in Markdown:<br/>
+											1. One<br/>
+											1. Two<br/>
+											1. Three<br/>
+											and<br/>
+											5. One<br/>
+											7. Two<br/>
+											2. Three<br/>
+											Render an ordered list.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Lists lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Convert this list of facts into an unordered list.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_8-1" class="editor">The Slovene botanist Fran Jesenko died while doing research for Triglav National Park, which he helped establish.
+The entrance porch of the Shankaragaurishvara Temple in Patan in Jammu and Kashmir, built in the late ninth century, has intricately sculpted carvings that appear freshly chiseled.
+The contralto Maria Radner, who died in the Germanwings plane crash, performed Wagner's Wesendonck Lieder at his villa, Wahnfried.</div>
+					<p><input id="ck_show_html_8-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_8-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_8-1" class="render-pad"></div>
+					<div id="html_pad_8-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Lists lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Convert this list into an ordered list.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_8-2" class="editor">4 steps to better sleep:
+Stick to a sleep schedule
+Create a bedtime ritual
+Get comfortable
+Manage stress</div>
+					<p><input id="ck_show_html_8-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_8-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_8-2" class="render-pad"></div>
+					<div id="html_pad_8-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Lists lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Use formatting elements (like bold and italics) inside a list.<br/>
+					Add spaces around the list markers (asterisk, pluses, dashes or numbers) to see what happens.<br/>
+					Type "1984. A novel." What happens? How can you correct it?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_8-3" class="editor"></div>
+					<p><input id="ck_show_html_8-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_8-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_8-3" class="render-pad"></div>
+					<div id="html_pad_8-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section nestedLists">
+		<!-- Nested Lists lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/10.png" alt="10" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Nested Lists</h2>
+					<p>
+						You can nest one list within another, just indent each asterisk (or number) one space more than the preceding item.<br/>
+						In fact, you can nest other elements like paragraphs, blockquotes or code blocks.
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/09.1.png" alt="* First item\n* Second item\n* Third item\n\n1. First item\n2. Second item\n3. Third item." />
+							<ul>
+								<li class="cd-single-point" style="top: 11%;left: 1%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>You can mix the two types of lists.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 62%;left: 5%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											To nest:<br/>
+											A paragraph, it must be indented by either 4 spaces or one tab.<br/>
+											A blockquote, it must be indented by at least one space.<br/>
+											A code block, it must be indented by either 8 spaces or two tabs.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Lists lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Convert the three paragraphs into an ordered list. In the second step, convert the list of ingredients into an unordered nested list.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_9-1" class="editor">In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes.
+Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows: 1/2 of the ziti, Provolone cheese, sour cream, 1/2 sauce mixture, remaining ziti, mozzarella cheese and remaining sauce mixture.
+Bake for 30 minutes in the preheated oven, or until cheeses are melted.</div>
+					<p><input id="ck_show_html_9-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_9-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_9-1" class="render-pad"></div>
+					<div id="html_pad_9-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Nested Lists lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, make an ordered list where CSS is the first item, HTML the second, and JS the third. Nest the code under each item with two or three tabs according to the indented level.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_9-2" class="editor">CSS
+.s1 {
+    font-size:80px;
+    color: blue;
+}
+HTML
+&lt;span class="s1"&gt;A Paragraph&lt;/span&gt;
+JS:
+$(".s1").each(function(idx, el) {
+    text = $(el).text();
+    console.log(text);
+}</div>
+					<p><input id="ck_show_html_9-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_9-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_9-2" class="render-pad"></div>
+					<div id="html_pad_9-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Nested Lists lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Nest paragraphs, blockquotes and code blocks inside of an element of an ordered list. Play with spaces.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_9-3" class="editor"></div>
+					<p><input id="ck_show_html_9-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_9-3" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_9-3" class="render-pad"></div>
+					<div id="html_pad_9-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section autolinking">
+		<!-- Autolinking lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/11.png" alt="11" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Autolinking</h2>
+					<p>
+						Github and Reddit will autolink standard URLs so instead of using the common Markdown to format one (and if you don't need a link text or title), you can simply enter it to be turned into a link.
+					</p>
+					<p>Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/10.1.png" alt="http:\\example.com" />
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Autolink lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Type an URL with differents formats like: (http://example.com, www.example.com, example.com)<br/>
+					Try other types of URL like mailto:info@example.com or ftp://192.168.0.1 and see if they are turned into links.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_10-1" class="editor"></div>
+					<p><input id="ck_show_html_10-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_10-1" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_10-1" class="render-pad"></div>
+					<div id="html_pad_10-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	<div class="section strikethrough">
+		<!-- Strikethrough lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/12.png" alt="12" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Strikethrough</h2>
+					<p>
+						Github and Reddit allow to create strikethrough text by surrounding a word with double tildes (~~).
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/11.1.png" alt="~~strikethrough~~" />
+							<ul>
+								<li class="cd-single-point" style="top: 36%;left: 4%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>There's no space between the tildes.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 36%;left: 75%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-down">
+										<p>There's no space between the text and the tildes neither.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Strikethrough lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, strikethrough the text "Jorge Mario Bergoglio".</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_11-1" class="editor">Esther Ballestrino, the former boss of Jorge Mario Bergoglio Pope Francis, was thrown from an aircraft by the Argentine security services in 1977.</div>
+					<p><input id="ck_show_html_11-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_11-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_11-1" class="render-pad"></div>
+					<div id="html_pad_11-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Strikethrough lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Try making a text bold, italics or code in addition to strikethrough.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_11-2" class="editor"></div>
+					<p><input id="ck_show_html_11-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_11-2" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_11-2" class="render-pad"></div>
+					<div id="html_pad_11-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section githubCodeBlocks">
+		<!-- Github Code Blocks lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/13.png" alt="13" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Github Code Blocks</h2>
+					<p>
+						Github supports what is called fenced blocks where you wrap the code with three backtick quotes (```) so you won't need to indent it by four spaces.<br/>
+						Github also supports syntax highlighting by adding an optional language identifier.
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/12.1.png" alt="```function test() { console.log(’Hi’); } ``` ```javascript function test() { console.log(’Hi’); } ```" />
+							<ul>
+								<li class="cd-single-point" style="top: 5%;left: 1%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>There's no space between the backtick quotes.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 47%;left: 18%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>You can see which keywords are valid in the <a target="_blank" href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">the languages YAML file</a> of <a target="_blank" href="https://github.com/github/linguist">Linguist</a>.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Github Code Blocks lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the following Ruby code with the Github syntax highlighting. <i>Hint: </i>ruby<i> is the language identifier</i></p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_12-1" class="editor"># Generates array of primes up to the square root of N
+ 
+primes = [2,3]
+ 
+(4..Math.sqrt(N).floor).each do |i|
+	(0..primes.length-1).each do |j|
+		if i % primes[j] == 0
+			isitprime = 0
+			break
+		else 
+			isitprime = 1
+		end		
+		end
+	if isitprime == 1
+		primes << i
+	end
+end</div>
+					<p><input id="ck_show_html_12-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_12-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_12-1" class="render-pad"></div>
+					<div id="html_pad_12-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Github Code Blocks Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Try code snippets from different languages (not all languages are supported here, just the more popular).</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_12-2" class="editor"></div>
+					<p><input id="ck_show_html_12-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_12-2" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_12-2" class="render-pad"></div>
+					<div id="html_pad_12-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="section redditSuperscript">
+		<!-- Reddit Superscript lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/14.png" alt="14" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Reddit Superscript</h2>
+					<p>
+						Reddit can display text in superscript by preceding it with a caret ( ^ ). It can be nested too.<br/>
+						To use spaces in the superscript text, you can enclose the text with parentheses.
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/13.1.png" alt="Text^superscript Text^(super script)" />
+							<ul>
+								<li class="cd-single-point" style="top: 26%;left: 18%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>There's no space between the caret and the text.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Reddit Superscript lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the text "x - 6x + 2" as superscript in the following equation:</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_13-1" class="editor">40x - 6x + 2 + 7 = 100</div>
+					<p><input id="ck_show_html_13-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_13-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_13-1" class="render-pad"></div>
+					<div id="html_pad_13-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Reddit Superscript lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					How would you nest superscripts?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_13-2" class="editor"></div>
+					<p><input id="ck_show_html_13-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_13-2" class="button-primary button-next-lesson">Go to the next lesson</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_13-2" class="render-pad"></div>
+					<div id="html_pad_13-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section tables">
+		<!-- Tables lesson. Intro Explanation  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="images/15.png" alt="15" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Tables</h2>
+					<p>
+						Github and Reddit support creating tables by dividing the column headers (first row) with dashes (-) and separating each column with a pipe (|). Optionally, you can add extra pipes on the ends.<br/>
+						Also, by including colons (:) in the header row, you can define text to be left-aligned, right-aligned, or center-aligned.
+					</p>
+					<p>Click on the red points to know more. Go the next slide to do some exercises by using the arrows on the sides or the dot menu at the bottom.</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="images/14.1.png" alt="| Header  | Header  | Header | |:---------|:--------:|---------:| | cell        |    cell    |        cell|" />
+							<ul>
+								<li class="cd-single-point" style="top: 30%;left: 12%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-bottom">
+										<p>Dashes don't need to match the length of the header text exactly.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 30%;left: 32%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-bottom">
+										<p>A colon on the left-most side indicates a left-aligned column.<br/><br/>
+										A colon on both sides indicates a center-aligned column.<br/><br/>
+										A colon on the right-most side indicates a right-aligned column.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 50%;left: 89%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Pipes at the beggining and end are just for aesthetic purposes.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Tables lesson. First exercise  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, recreate with Markdown the following table:</p>
+					<table>
+						<tr>
+							<th>2000</th>
+							<th>2010</th>
+						</tr>
+						<tr>
+							<td>50</td>
+							<td>30</td>
+						</tr>
+					</table>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_14-1" class="editor"></div>
+					<p><input id="ck_show_html_14-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_14-1" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-1" class="render-pad"></div>
+					<div id="html_pad_14-1" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Tables lesson. Second exercise  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, recreate with Markdown a little more complex table:</p>
+					<table>
+						<tr>
+							<th>On the left</th>
+							<th>On the right</th>
+						</tr>
+						<tr>
+							<td style="text-align:right">88</td>
+							<td style="text-align:right">99</td>
+						</tr>
+					</table>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_14-2" class="editor"></div>
+					<p><input id="ck_show_html_14-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_14-2" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-2" class="render-pad"></div>
+					<div id="html_pad_14-2" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Tables lesson. Third exercise  -->
+	    <div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>In this exercise, recreate with Markdown a more complex table:</p>
+					<table>
+						<tr>
+							<th>Left Column</th>
+							<th>Center Column</th>
+							<th>Right Column</th>
+						</tr>
+						<tr>
+							<td style="text-align:left">one</td>
+							<td style="text-align:center">two</td>
+							<td style="text-align:right">three</td>
+						</tr>
+						<tr>
+							<td style="text-align:left"><strong>four</strong></td>
+							<td style="text-align:center"><strong>five</strong></td>
+							<td style="text-align:right"><strong>six</strong></td>
+						</tr>
+						<tr>
+							<td style="text-align:left">seven</td>
+							<td style="text-align:center">eight</td>
+							<td style="text-align:right">nine</td>
+						</tr>
+					</table>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_14-3" class="editor"></div>
+					<p><input id="ck_show_html_14-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_14-3" class="button-primary button-answer">Show me the answer</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-3" class="render-pad"></div>
+					<div id="html_pad_14-3" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Tables lesson. Fourth exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Play with the optional pipes on the ends, what happens when you left some pipes on some columns? When you left the pipes on the beggining and delete the ones at the end?<br/>
+					Add other markdown elements to the rows of a table.</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<div id="editor_14-4" class="editor"></div>
+					<p><input id="ck_show_html_14-4" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<p><button id="btn_answer_14-4" class="button-primary button-next-lesson">Go to the final challenge</button></p>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-4" class="render-pad"></div>
+					<div id="html_pad_14-4" class="html-pad"></div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="section finalExercise">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<h2>Final Challenge</h2>
+					<p>Write in the text area the markdown to recreate the format of the (infinite) scrolling text. Make the main header level-two and the subheaders level-three. Convert all the URLs into links. You can pause or change the speed of the scrolling effect but, can you recreate the format without pausing or decreasing the speed? Click the Play button to start.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="three columns">
+					<button id="btn_play" class="button-primary">Play</button>
+				</div>
+				<div class="eight columns">
+					<div class="slider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<div class="challenge-container">
+						<div class="marquee">
+							<h2>Markdown</h2>
+							<p><strong>Markdown</strong> is a markup language with plain text formatting syntax designed so that it can be converted to <em>HTML</em> and many other formats using a tool by the same name. </p>
+							<h3>History</h3>
+							<p>John Gruber, with substantial contributions from Aaron Swartz, created the <strong>Markdown</strong> language in 2004 with the goal of enabling people</p> 
+							<blockquote>"To write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid <em>XHTML</em> (or <em>HTML</em>)."</blockquote>
+							<p>Sites such as:</p>
+							<ul>
+								<li><a href="http://github.com">http://github.com</a></li>
+								<li><a href="http://reddit.com">http://reddit.com</a></li>
+								<li><a href="http://stackexchange.com">http://stackexchange.com</a></li>
+							</ul>
+							<p>Use variants of <strong>Markdown</strong> to facilitate discussion between users.</p>
+							<h3>Standardization</h3>
+							<p>There is no clearly defined <strong>Markdown</strong> standard. From 2012 through 2014, a group of people including Jeff Atwood launched what Atwood characterized as a standardization effort, a new dialect named <code>CommonMark</code>.</p>
+							<p>Adapted from <a href="http://en.wikipedia.org/wiki/Markdown">http://en.wikipedia.org/wiki/Markdown</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<div id="editor_15-1" class="editor"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<div id="render_pad_15-1" class="render-pad"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"  charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery-ui-slider-pips.min.js"></script>
+  <script src="js/sweet-alert.min.js"></script>
+  <script src="js/jquery.slimscroll.min.js"></script>
+  <script src="js/jquery.fullPage.min.js"></script>
+  <script src="js/nanobar.min.js"></script>
+  <script src="js/marked.js"></script>
+  <script src="js/snuownd.js"></script>
+  <script src="js/exercises.js"></script>
+  
+  <script type="text/javascript">	
+		$(document).ready(function() {
+			// Constants
+			var NUMBER_OF_SECTIONS = 15;
+			var BEGINNING_SECTION = 2;
+			var EXTENSION_SECTION = 11;
+			var FINAL_SECTION = 16;
+			var COMMON_MD = 0;
+			var GITHUB_MD = 1;
+			var REDDIT_MD = 2;
+			var MAX_SPEED = 150;
+			var MIN_SPEED = 70;
+			var INITIAL_SPEED = 115;
+			var EDITOR_ID_PREFIX = "editor_";
+			var CK_SHOW_HTML_ID_PREFIX = "ck_show_html_";
+			var BTN_SHOW_ANSWER_ID_PREFIX = "btn_answer_";
+			var RENDER_PAD_ID_PREFIX = "render_pad_";
+			var HTML_PAD_ID_PREFIX = "html_pad_";
+			
+			var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
+			nanobar.go( 0 );
+			
+			// Set up fullpage.js
+			$('#fullpage').fullpage({
+				anchors: ['intro', 'emphasis', 'headings', 'links', 'images', 'code', 'blockquotes', 'paragraphs', 
+							'lists', 'nestedLists', 'autolinking',
+							'strikethrough', 'githubCodeBlocks', 'redditSuperscript', 'Tables', 'finalExercise'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Intro', 'Emphasis', 'Headings', 'Links', 'Images', 'Code', 'Blockquotes', 'Paragraphs', 
+							'Lists', 'Nested Lists', 'Autolinking',
+							'Strikethrough', 'Github Code Blocks', 'Reddit Superscript', 'Tables', 'Final Exercise'],
+				slidesNavigation: true,
+				keyboardScrolling: false,
+				controlArrows: true,
+				onLeave: function(index, nextIndex, direction){
+					var leavingSection = $(this);
+					var advancedPercentage = ((nextIndex - 1) / NUMBER_OF_SECTIONS) * 100;
+					if (advancedPercentage == 0) advancedPercentage = 0.01;
+					nanobar.go( advancedPercentage );
+				}
+			});
+			
+			// Set up welcome buttons
+			$("#btn_everything").click(function() {
+			  $.fn.fullpage.moveTo(BEGINNING_SECTION);
+			});
+			$("#btn_advanced").click(function() {
+			  $.fn.fullpage.moveTo(EXTENSION_SECTION);
+			});
+			$("#btn_final").click(function() {
+			  $.fn.fullpage.moveTo(FINAL_SECTION);
+			});
+			
+			// Set up final challenge
+			var marqueeEl = $(".marquee");
+			var playBtn = $("#btn_play")
+			toggleMarquee();
+			animateMarquee(null, {value: INITIAL_SPEED})
+			playBtn.click(toggleMarquee);
+			$('.slider').slider({min: MIN_SPEED, max: MAX_SPEED, value: INITIAL_SPEED, step: 5}); 
+			$('.slider')
+			.slider("pips", {
+				labels: { "first": "Faster", "last": "Slower" }
+			})
+			.slider("float")
+			.on("slidechange", animateMarquee);
+			function toggleMarquee() {
+				if(marqueeEl.css("animation-play-state") == "paused") {
+					marqueeEl.css({"animation-play-state": "running"});
+					playBtn.html("Pause");
+				} else {
+					marqueeEl.css({"animation-play-state": "paused"});
+					playBtn.html("Play");
+				}
+			}
+			function animateMarquee(e, ui) {
+				var state = marqueeEl.css("animation-play-state");
+				marqueeEl.css({animation: "marquee " + ui.value + "s linear infinite", "animation-play-state": state});
+			}
+			
+			// Open interest point descriptions
+			$('.cd-single-point').children('a').on('click', function(event){
+				event.preventDefault();
+				var selectedPoint = $(this).parent('li');
+				if( selectedPoint.hasClass('is-open') ) {
+					selectedPoint.removeClass('is-open').addClass('visited');
+				} else {
+					selectedPoint.addClass('is-open').siblings('.cd-single-point.is-open').removeClass('is-open').addClass('visited');
+				}
+			});
+			// Close interest point descriptions
+			$('.cd-close-info').on('click', function(event){
+				event.preventDefault();
+				$(this).parents('.cd-single-point').eq(0).removeClass('is-open').addClass('visited');
+			});
+			
+			// Set up markdown editors
+			$('.editor').each(function() {
+				var elementId = $(this)[0].id;
+				var exerciseId = getExerciseId(elementId);
+				
+				// Set up ace editor
+				var editor = ace.edit(elementId);
+				editor.setStyle("ace-overrides");
+				editor.setTheme("ace/theme/xcode");
+				editor.getSession().setMode("ace/mode/markdown");
+				editor.getSession().setUseWrapMode(true);
+				editor.setShowPrintMargin(false);
+				editor.renderer.setShowGutter(false);
+				editor.setHighlightActiveLine(false);
+				editor.$blockScrolling = Infinity;
+				
+				// Set up event to update markdown/html when the user writes something
+				$(this).on('keyup', function(event){
+					var md = generateMd(exerciseId);
+					
+					if(exercises[exerciseId] != undefined && md.trim() == exercises[exerciseId]["answer"]) {
+						if(exerciseId == "15-1") {
+							swal({title:"Excelect job!", text: "You are now a Markdown Master", type: "success"});
+						} else {
+							swal({title:"Good job!", text: "That's correct. Now you can go to the next exercise.", type: "success"});
+						}
+					}
+				});
+				
+				// For the initial text
+				generateMd(exerciseId);
+			});
+			
+			// Set up pads where html will be shown
+			$('.html-pad').each(function() {
+				var elementId = $(this)[0].id;
+				
+				// Set up ace editor
+				var htmlEditor = ace.edit(elementId);
+				htmlEditor.setStyle("ace-overrides");
+				htmlEditor.setTheme("ace/theme/xcode");
+				htmlEditor.getSession().setMode("ace/mode/html");
+				htmlEditor.getSession().setUseWrapMode(true);
+				htmlEditor.setShowPrintMargin(false);
+				htmlEditor.renderer.setShowGutter(false);
+				htmlEditor.setHighlightActiveLine(false);
+				htmlEditor.setReadOnly(true);
+				htmlEditor.$blockScrolling = Infinity;
+			});
+			
+			// Set up show answer buttons
+			$('.button-answer').each(function() {
+				var elementId = $(this)[0].id;
+				var exerciseId = getExerciseId(elementId);
+				var htmlPadElement = $("#" + RENDER_PAD_ID_PREFIX + exerciseId)
+				
+				// Set up click event for the button
+				$(this).on('click', function(event){
+					ace.edit(EDITOR_ID_PREFIX + exerciseId).getSession().setValue(exercises[exerciseId]["correctMd"]);
+					generateMd(exerciseId);
+				});
+			});
+			
+			// Set up show html checkboxes
+			$('.show-html').each(function() {
+				var elementId = $(this)[0].id;
+				var exerciseId = getExerciseId(elementId);
+				
+				// Set up click event for the checkbox
+				$(this).on('click', function(event){
+					var toggle = 'hidden';
+					if( $("#" + HTML_PAD_ID_PREFIX + exerciseId).css('visibility') == 'hidden' ) {
+						toggle = 'visible';
+					}
+					$("#" + HTML_PAD_ID_PREFIX + exerciseId).css('visibility', toggle);
+					generateMd(exerciseId);
+				});
+			});
+			
+			// Set up next lesson buttons checkboxes 
+			$('.button-next-lesson').each(function() {
+				// Set up click event for the checkbox
+				$(this).on('click', function(event){
+					$.fn.fullpage.moveSectionDown();
+				});
+			});
+			
+			
+			function generateMd(exerciseId) {
+				var text = ace.edit(EDITOR_ID_PREFIX + exerciseId).getSession().getValue();
+				var mdFlavour = configureExtensions(exerciseId);
+				
+				// Set up marked options
+				if(mdFlavour == GITHUB_MD) {
+					marked.setOptions({
+					  //renderer: new marked.Renderer(),
+					  gfm: true,
+					  tables: true,
+					  breaks: false,
+					  pedantic: false,
+					  sanitize: true,
+					  smartLists: false,
+					  smartypants: false,
+					  highlight: function(code, lang) {
+						var languageToDetect = typeof(lang) !== "undefined" ? lang.toLowerCase() : '';
+						return hljs.highlightAuto(code, [languageToDetect]).value;
+					  }
+					});
+				} else {
+					marked.setOptions({
+					  //renderer: new marked.Renderer(),
+					  gfm: false,
+					  tables: false,
+					  breaks: false,
+					  pedantic: false,
+					  sanitize: true,
+					  smartLists: false,
+					  smartypants: false
+					});
+				}
+				
+				var html = "";
+				if(mdFlavour == REDDIT_MD) {
+					html = SnuOwnd.getParser().render(text);
+				} else {
+					html = marked(text);
+				}
+				$("#" + RENDER_PAD_ID_PREFIX + exerciseId).html("").html(html);
+				
+				var chk = $("#" + CK_SHOW_HTML_ID_PREFIX + exerciseId)[0];
+				if(typeof(chk) !== 'undefined' && chk.checked) {
+					ace.edit(HTML_PAD_ID_PREFIX + exerciseId).getSession().setValue(html);
+				}
+				
+				return html;
+			}
+			
+			function getExerciseId(elementId) {
+				var exerciseId = elementId.substring(elementId.lastIndexOf("_") + 1);
+				
+				return exerciseId;
+			}
+			
+			function configureExtensions(exerciseId) {
+				// The format of exerciseId is lesson-exercise
+				var lesson = parseInt(exerciseId.split("-")[0], 10);
+				var mdFlavor = GITHUB_MD;
+				
+				// From lesson 10 onward, extensions have to be enable
+				if(lesson == 13) {
+					mdFlavor = REDDIT_MD;
+				}
+				else if (lesson < 10 || lesson == 15) {
+					mdFlavor = COMMON_MD; 
+				}
+				
+				return mdFlavor;
+			}
+		});
+	</script>
+</body>
+</html>

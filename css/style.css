@@ -1,0 +1,247 @@
+/*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+
+/* #Tabs
+================================================== */
+	ul.tabs { 
+		display: block;
+		margin: 0 0 20px 0;
+		padding: 0;
+		border-bottom: solid 1px #ddd; }
+	ul.tabs li { 
+		display: block;
+		width: auto;
+		height: 30px;
+		padding: 0;
+		float: left;
+		margin-bottom: 0; }
+	ul.tabs li a { 
+		display: block; 
+		text-decoration: none;
+		width: auto; 
+		height: 29px; 
+		padding: 0px 20px; 
+		line-height: 30px; 
+		border: solid 1px #ddd;
+		border-width: 1px 0 0 1px; 
+		margin: 0;  
+		background: #f5f5f5;
+		font-size: 13px; }
+	ul.tabs li a.active { 
+		background: #fff; 
+		height: 30px;
+		position: relative;
+		top: -4px;
+		padding-top: 4px;
+		border-right-width: 1px;
+		margin: 0 -1px 0 0;
+		color: #111;
+		-moz-border-radius-topleft: 2px;
+		-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px;
+		-moz-border-radius-topright: 2px;
+		-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px; }
+	ul.tabs li:first-child a {
+		-moz-border-radius-topleft: 2px;
+		-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px; }
+	ul.tabs li:last-child a {
+		border-width: 1px 1px 0 1px;
+		-moz-border-radius-topright: 2px;
+		-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px; }
+	
+	ul.tabs-content { margin: 0; display: block; }
+	ul.tabs-content > li { display:none; }
+	ul.tabs-content > li.active { display: block; }
+		
+	/* Clearfixing tabs for beautiful stacking */
+	ul.tabs:before,
+	ul.tabs:after {
+	  content: '\0020';
+	  display: block;
+	  overflow: hidden;
+	  visibility: hidden;
+	  width: 0;
+	  height: 0; }
+	ul.tabs:after {
+	  clear: both; }
+	ul.tabs {
+	  zoom: 1; }
+
+/* #Blockquotes
+================================================== */
+blockquote {
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* #Code
+================================================== */
+.code-block {
+	background:#F1F1F1;
+	border: 1px solid #E1E1E1;
+	border-radius: 4px;
+	font-size: 90%;
+	padding: .2rem .5rem;
+	font-family:monospace, monospace;
+}
+
+/* #fullPage.js customization
+================================================== */
+#fp-nav ul li .fp-tooltip {
+	color: #000;
+}
+
+.fp-controlArrow.fp-prev {
+	border-color: transparent #000 transparent transparent;
+}
+.fp-controlArrow.fp-next {
+	border-color: transparent transparent transparent #000;
+	padding-right: 20px;
+}
+
+/* sweet-alert customization
+================================================== */
+.sweet-alert button {
+	line-height: normal;
+}
+
+/* #General
+================================================== */
+.center {
+	text-align: center;
+}
+
+.font-big-aligned {
+	font-size: 1.8em;
+	vertical-align:middle;
+}
+
+.font-big {
+	font-size: 1.8em;
+}
+
+/* #To format the editors for the exercises
+================================================== */
+.editor {
+	height: 200px;
+	border: 1px #666 solid;
+	font-size: 1em !important;
+}
+.render-pad, .html-pad {
+	font-size: 0.9em !important;
+	background: rgba(255, 255, 255, 0.9);
+	height: 200px;
+	border: 1px #666 solid; 
+	overflow: auto;
+}
+.render-pad {
+	padding: 0.5em;
+}
+.html-pad {
+	margin-top: 10px; 
+	visibility: hidden;
+}
+
+/* #To indent correctly nested elements in list
+================================================== */
+.render-pad li > pre, .render-pad li > preblockquote { 
+	margin-left: 1em;
+}
+.render-pad li > p:not(:first-child) { 
+	margin-left: 1em;
+}
+
+/* #To set up the final challenge
+================================================== */
+.challenge-container {
+	height: 13em;
+	overflow: hidden;
+	background: white;
+	margin-bottom: 10px;
+	margin: 1em auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.marquee {
+	top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+/* Make it move! */
+@-webkit-keyframes marquee {
+    0%   { top:   10em }
+    100% { top: -45em }
+}
+@-moz-keyframes marquee {
+    0%   { top:   10em }
+    100% { top: -45em }
+}
+@-o-keyframes marquee {
+    0%   { top:   10em }
+    100% { top: -45em }
+}
+@keyframes marquee {
+    0%   { top:   10em }
+    100% { top: -45em }
+}
+
+/* To make look pretty */
+.challenge-container:before, .challenge-container::before,
+.challenge-container:after,  .challenge-container::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%; height: 2em;
+    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+}
+
+.challenge-container:after, .challenge-container::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.challenge-container:before, .challenge-container::before {
+    top: 0;
+}
+
+.finalExercise .editor {
+	height: 150px;
+	margin-bottom: 10px;
+}
+
+.finalExercise .render-pad {
+	height: 150px;
+	border: 0px;
+    font-size: 1.2em !important;
+}
+
+.ui-widget-content .ui-slider-handle.ui-state-default {
+	background: #222;
+	border-color: #222;
+}
+.ui-widget-content .ui-slider-handle.ui-state-hover{
+	background: #33C3F0;
+	border-color: #33C3F0;
+}
