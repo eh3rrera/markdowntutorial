@@ -129,12 +129,15 @@ blockquote p {
 }
 
 .font-big-aligned {
-	font-size: 1.8em;
-	vertical-align:middle;
+	font-family: sans-serif;
 }
 
 .font-big {
 	font-size: 1.8em;
+}
+
+.custom-hr {
+	border-top: 3px solid #E1E1E1;
 }
 
 /* #To format the editors for the exercises

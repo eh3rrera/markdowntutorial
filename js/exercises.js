@@ -97,30 +97,5 @@ var exercises = {
 	"14-3": {
 		answer: '<table>\n<thead>\n<tr>\n<th style="text-align:left">Left Column</th>\n<th style="text-align:center">Center Column</th>\n<th style="text-align:right">Right Column</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align:left">one</td>\n<td style="text-align:center">two</td>\n<td style="text-align:right">three</td>\n</tr>\n<tr>\n<td style="text-align:left"><strong>four</strong></td>\n<td style="text-align:center"><strong>five</strong></td>\n<td style="text-align:right"><strong>six</strong></td>\n</tr>\n<tr>\n<td style="text-align:left">seven</td>\n<td style="text-align:center">eight</td>\n<td style="text-align:right">nine</td>\n</tr>\n</tbody>\n</table>',
 		correctMd: "|Left Column|Center Column|Right Column|\n|:----------|:-----------:|-----------:|\n|one|two|three|\n|**four**|**five**|**six**|\n|seven|eight|nine|"
-	}, 
-	"15-1": {
-		answer: '<h2 id="markdown">Markdown</h2>\n<p><strong>Markdown</strong> is a markup language with plain text formatting syntax designed so that it can be converted to <em>HTML</em> and many other formats using a tool by the same name.</p>\n<h3 id="history">History</h3>\n<p>John Gruber, with substantial contributions from Aaron Swartz, created the <strong>Markdown</strong> language in 2004 with the goal of enabling people</p>\n<blockquote>\n<p>&quot;To write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid <em>XHTML</em> (or <em>HTML</em>&gt;).&quot;</p>\n</blockquote>\n<p>Sites such as:</p>\n<ul>\n<li><a href="http://github.com">http://github.com</a></li>\n<li><a href="http://reddit.com">http://reddit.com</a></li>\n<li><a href="http://stackexchange.com">http://stackexchange.com</a></li>\n</ul>\n<p>Use variants of <strong>Markdown</strong> to facilitate discussion between users.</p>\n<h3 id="standardization">Standardization</h3>\n<p>There is no clearly defined <strong>Markdown</strong> standard. From 2012 through 2014, a group of people including Jeff Atwood launched what Atwood characterized as a standardization effort, a new dialect named <code>CommonMark</code>.</p>\n<p>Adapted from <a href="http://en.wikipedia.org/wiki/Markdown">http://en.wikipedia.org/wiki/Markdown</a></p>',
-		correctMd: '##Markdown\n\n**Markdown** is a markup language with plain text formatting syntax designed so that it can be converted to *HTML* and many other formats using a tool by the same name.\n###History\nJohn Gruber, with substantial contributions from Aaron Swartz, created the **Markdown** language in 2004 with the goal of enabling people\n>"To write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid *XHTML* (or *HTML*>)."\n\nSites such as:\n\n* [http://github.com](http://github.com)\n* [http://reddit.com](http://reddit.com)\n* [http://stackexchange.com](http://stackexchange.com)\n\nUse variants of **Markdown** to facilitate discussion between users.\n\n###Standardization\nThere is no clearly defined **Markdown** standard. From 2012 through 2014, a group of people including Jeff Atwood launched what Atwood characterized as a standardization effort, a new dialect named `CommonMark`.\n\nAdapted from [http://en.wikipedia.org/wiki/Markdown](http://en.wikipedia.org/wiki/Markdown)'
-		/**
-		##Markdown
-
-**Markdown** is a markup language with plain text formatting syntax designed so that it can be converted to *HTML* and many other formats using a tool by the same name.
-###History
-John Gruber, with substantial contributions from Aaron Swartz, created the **Markdown** language in 2004 with the goal of enabling people
->"To write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid *XHTML* (or *HTML*>)."
-
-Sites such as:
-
-* [http://github.com](http://github.com)
-* [http://reddit.com](http://reddit.com)
-* [http://stackexchange.com](http://stackexchange.com)
- 
-Use variants of **Markdown** to facilitate discussion between users.
-
-###Standardization
-There is no clearly defined **Markdown** standard. From 2012 through 2014, a group of people including Jeff Atwood launched what Atwood characterized as a standardization effort, a new dialect named `CommonMark`.
-
-Adapted from [http://en.wikipedia.org/wiki/Markdown](http://en.wikipedia.org/wiki/Markdown)
-		**/
 	}
 };

@@ -42,7 +42,7 @@
 	  
 	<div class="row">
 		<div class="twelve columns center" style="margin-top: 2%">
-			<a class="button" href="tutorial.html" target="_blank">Start</a>
+			<a class="button" href="tutorial/index.html" target="_blank">Start</a>
 		</div>
 	</div>
 		
@@ -82,7 +82,7 @@
 						</tr>
 						<tr>
 						  <td><h1>Heading 1</h1></td>
-						  <td>#Heading 1</td>
+						  <td># Heading 1</td>
 						  <td>
 							Heading 1<br/>
 							=========
@@ -90,31 +90,11 @@
 						</tr>
 						<tr>
 						  <td><h2>Heading 2</h2></td>
-						  <td>##Heading 2</td>
+						  <td>## Heading 2</td>
 						  <td>
-							Heading 1<br/>
+							Heading 2<br/>
 							---------
 						  </td>
-						</tr>
-						<tr>
-						  <td><h3>Heading 3</h3></td>
-						  <td>###Heading 3</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><h4>Heading 4</h4></td>
-						  <td>####Heading 4</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><h5>Heading 5</h5></td>
-						  <td>#####Heading 5</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><h6>Heading 6</h6></td>
-						  <td>######Heading 6</td>
-						  <td>&nbsp;</td>
 						</tr>
 						<tr>
 						  <td><a href="http://commonmark.org/">Link</a></td>
@@ -127,26 +107,29 @@
 						  <td>![Markdown][a_image]<br/>. . .<br/>[a_image]:http://url/image.png</td>
 						</tr>
 						<tr>
-						  <td>Inline <code>code</code> with back-ticks</td>
+						  <td>Inline <code>code</code> with backticks</td>
 						  <td>Inline <span class="font-big-aligned">`</span>code<span class="font-big-aligned">`</span> with backticks</td>
 						  <td>&nbsp;</td>
 						</tr>
 						<tr>
 						  <td>
 							<div class="code-block">
-								var m = 'Use triple backticks or indent four spaces for code blocks'<br/>
-								print m
+								#Either use<br/>
+								print 'Three backticks.'<br/>
+								print 'Or indent four spaces.'
 							</div>
 						  </td>
 						  <td>
 							<span class="font-big-aligned" style="vertical-align:bottom;line-height:0.1em">```</span><br/>
-							var m = 'Use triple backticks or indent four spaces for code blocks'<br/>
-							print m<br/>
+							#Either use<br/>
+							print 'Three backticks.'<br/>
+							print 'Or indent four spaces.'<br/>
 							<span class="font-big-aligned">```</span>
 						  </td>
 						  <td>
-							&nbsp;&nbsp;&nbsp;&nbsp;var m = 'Use triple backticks or indent four spaces for code blocks'<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;print m<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;#Either use<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;print 'Three backticks.'<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;print 'Or indent four spaces.'
 						  </td>
 						</tr>
 						<tr>
@@ -205,15 +188,15 @@
 								<li>
 									Item
 									<ol>
-										<li>This is indented two spaces</li>
-										<li>This is indented two spaces</li>
+										<li>This is indented four spaces</li>
+										<li>This is indented four spaces</li>
 									</ol>
 								</li>
 								<li>
 									Item
 									<ul>
-										<li>This is indented two spaces</li>
-										<li>This is indented two spaces</li>
+										<li>This is indented four spaces</li>
+										<li>This is indented four spaces</li>
 									</ul>
 								</li>
 								<li>Item</li>
@@ -222,20 +205,32 @@
 						  <td>
 							<p style="line-height: 1.6em">
 								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;1. This is indented two spaces<br/>
-								&nbsp;&nbsp;2. This is indented two spaces<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;1. This is indented four spaces<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;2. This is indented four spaces<br/>
 								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented two spaces<br/>
-								&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented two spaces<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
 								<span class="font-big-aligned">*</span> Item
 							</p>
 						  </td>
 						  <td>&nbsp;</td>
 						</tr>
 						<tr>
-						  <td><hr/></td>
-						  <td>---</td>
-						  <td>***</td>
+						  <td>
+							<hr class="custom-hr"/>
+							I'm between two rules!
+							<hr class="custom-hr"/>
+						  </td>
+						  <td>
+							---<br/>
+							I'm between two rules!<br/>
+							---
+						  </td>
+						  <td>
+							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><br/>
+							I'm between two rules!<br/>
+							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span>
+						  </td>
 						</tr>
 					  </tbody>
 					</table>
