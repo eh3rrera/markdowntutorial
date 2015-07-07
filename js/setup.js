@@ -13,6 +13,7 @@ function goToSlide(n) {
 	$('.slide.active').removeClass('active');
 	var slide = $(".slide:eq(" + n + ")");
 	slide.addClass("active");
+	updateSlideNavigation(n);
 	advanceBar(n);
 }
 	
@@ -21,6 +22,11 @@ function advanceBar(currentSlide) {
 	if (advancedPercentage == 0) advancedPercentage = 0.01;
 	else if (advancedPercentage == 100) advancedPercentage = 99.99999;
 	nanobar.go( advancedPercentage );
+}
+
+function updateSlideNavigation(index) {
+	$('.current').removeClass('current');
+	$(".dotstyle li:eq(" + index + ")").addClass('current');
 }
 
 $(document).ready(function() {
@@ -55,10 +61,6 @@ $(document).ready(function() {
 		}
 	} );
 	
-	$('.dotstyle li').click(function(){
-		updateSlideNavigation($(this).index());
-	});
-	
 	// Set up next/previous buttons
 	$(".button-next").on('click', function(event){
 		var slide = $(this).parents(".slide").next(".slide").index();
@@ -70,10 +72,6 @@ $(document).ready(function() {
 		goToSlide(slide);
 		updateSlideNavigation(slide);
 	});
-	function updateSlideNavigation(index) {
-		$('.current').removeClass('current');
-		$(".dotstyle li:eq(" + index + ")").addClass('current');
-	}
 	
 	// Open interest point descriptions
 	$('.cd-single-point').children('a').on('click', function(event){
