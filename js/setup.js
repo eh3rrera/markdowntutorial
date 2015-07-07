@@ -3,6 +3,25 @@
 * http://www.opensource.org/licenses/mit-license.php
 * 4/18/2015
 */
+	
+// Set up progress bar
+var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
+var numberSlides = $(".slide").length;
+advanceBar(0);
+
+function goToSlide(n) {
+	$('.slide.active').removeClass('active');
+	var slide = $(".slide:eq(" + n + ")");
+	slide.addClass("active");
+	advanceBar(n);
+}
+	
+function advanceBar(currentSlide) {
+	var advancedPercentage = ((currentSlide + 1) / numberSlides) * 100;
+	if (advancedPercentage == 0) advancedPercentage = 0.01;
+	else if (advancedPercentage == 100) advancedPercentage = 99.99999;
+	nanobar.go( advancedPercentage );
+}
 
 $(document).ready(function() {
 	// Constants
@@ -16,28 +35,45 @@ $(document).ready(function() {
 	var RENDER_PAD_ID_PREFIX = "render_pad_";
 	var HTML_PAD_ID_PREFIX = "html_pad_";
 	
-	// Set up fullpage.js
-	$('#fullpage').fullpage({
-		navigation: false,
-		slidesNavigation: true,
-		keyboardScrolling: false,
-		controlArrows: false,
-		scrollOverflow: true
-	});
+	// swipe for mobile devices
+	$( ".touch .slide" ).on( "swipeleft", function() {
+		var slide = $(this);
+		var nextSlide = slide.next(".slide");
+		if(nextSlide.length != 0) {
+			slide.removeClass('active');
+			nextSlide.addClass("active");
+			advanceBar(nextSlide.index());
+		}
+	} );
+	$( ".touch .slide" ).on( "swiperight", function() {
+		var slide = $(this);
+		var prevSlide = slide.prev(".slide");
+		if(prevSlide.length != 0) {
+			slide.removeClass('active');
+			prevSlide.addClass("active");
+			advanceBar(prevSlide.index());
+		}
+	} );
 	
-	// Set up progress bar
-	var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
-	var advancedPercentage = (CURRENT_SECTION / NUMBER_OF_SECTIONS) * 100;
-	if (advancedPercentage == 0) advancedPercentage = 0.01;
-	nanobar.go( advancedPercentage );
+	$('.dotstyle li').click(function(){
+		updateSlideNavigation($(this).index());
+	});
 	
 	// Set up next/previous buttons
 	$(".button-next").on('click', function(event){
-	  $.fn.fullpage.moveSlideRight();
+		var slide = $(this).parents(".slide").next(".slide").index();
+		goToSlide(slide);
+		updateSlideNavigation(slide);
 	});
 	$(".button-previous").on('click', function(event){
-	  $.fn.fullpage.moveSlideLeft();
+		var slide = $(this).parents(".slide").prev(".slide").index();
+		goToSlide(slide);
+		updateSlideNavigation(slide);
 	});
+	function updateSlideNavigation(index) {
+		$('.current').removeClass('current');
+		$(".dotstyle li:eq(" + index + ")").addClass('current');
+	}
 	
 	// Open interest point descriptions
 	$('.cd-single-point').children('a').on('click', function(event){
@@ -60,17 +96,6 @@ $(document).ready(function() {
 		var elementId = $(this)[0].id;
 		var exerciseId = getExerciseId(elementId);
 		
-		// Set up ace editor
-		var editor = ace.edit(elementId);
-		editor.setStyle("ace-overrides");
-		editor.setTheme("ace/theme/xcode");
-		editor.getSession().setMode("ace/mode/markdown");
-		editor.getSession().setUseWrapMode(true);
-		editor.setShowPrintMargin(false);
-		editor.renderer.setShowGutter(false);
-		editor.setHighlightActiveLine(false);
-		editor.$blockScrolling = Infinity;
-		
 		// Set up event to update markdown/html when the user writes something
 		$(this).on('keyup', function(event){
 			var md = generateMd(exerciseId);
@@ -88,23 +113,6 @@ $(document).ready(function() {
 		generateMd(exerciseId);
 	});
 	
-	// Set up pads where html will be shown
-	$('.html-pad').each(function() {
-		var elementId = $(this)[0].id;
-		
-		// Set up ace editor
-		var htmlEditor = ace.edit(elementId);
-		htmlEditor.setStyle("ace-overrides");
-		htmlEditor.setTheme("ace/theme/xcode");
-		htmlEditor.getSession().setMode("ace/mode/html");
-		htmlEditor.getSession().setUseWrapMode(true);
-		htmlEditor.setShowPrintMargin(false);
-		htmlEditor.renderer.setShowGutter(false);
-		htmlEditor.setHighlightActiveLine(false);
-		htmlEditor.setReadOnly(true);
-		htmlEditor.$blockScrolling = Infinity;
-	});
-	
 	// Set up show answer buttons
 	$('.button-answer').each(function() {
 		var elementId = $(this)[0].id;
@@ -113,7 +121,7 @@ $(document).ready(function() {
 		
 		// Set up click event for the button
 		$(this).on('click', function(event){
-			ace.edit(EDITOR_ID_PREFIX + exerciseId).getSession().setValue(exercises[exerciseId]["correctMd"]);
+			$("#" + EDITOR_ID_PREFIX + exerciseId).text(exercises[exerciseId]["correctMd"]);
 			generateMd(exerciseId);
 		});
 	});
@@ -126,25 +134,19 @@ $(document).ready(function() {
 		// Set up click event for the checkbox
 		$(this).on('click', function(event){
 			var toggle = 'hidden';
-			if( $("#" + HTML_PAD_ID_PREFIX + exerciseId).css('visibility') == 'hidden' ) {
+			var element = $("#" + HTML_PAD_ID_PREFIX + exerciseId);
+			element.toggle();
+			/*if( element.css('visibility') == 'hidden' ) {
 				toggle = 'visible';
 			}
-			$("#" + HTML_PAD_ID_PREFIX + exerciseId).css('visibility', toggle);
+			element.css('visibility', toggle);*/
 			generateMd(exerciseId);
-		});
-	});
-	
-	// Set up next lesson buttons checkboxes 
-	$('.button-next-lesson').each(function() {
-		// Set up click event for the checkbox
-		$(this).on('click', function(event){
-			$.fn.fullpage.moveSectionDown();
 		});
 	});
 	
 	
 	function generateMd(exerciseId) {
-		var text = ace.edit(EDITOR_ID_PREFIX + exerciseId).getSession().getValue();
+		var text = $("#" + EDITOR_ID_PREFIX + exerciseId).val();
 		var mdFlavour = configureExtensions(exerciseId);
 		
 		// Set up marked options
@@ -186,7 +188,8 @@ $(document).ready(function() {
 		
 		var chk = $("#" + CK_SHOW_HTML_ID_PREFIX + exerciseId)[0];
 		if(typeof(chk) !== 'undefined' && chk.checked) {
-			ace.edit(HTML_PAD_ID_PREFIX + exerciseId).getSession().setValue(html);
+			var htmlSH = hljs.highlightAuto(html, ["html"]).value.replace(/(?:\r\n|\r|\n)/g, '<br />');
+			$("#" + HTML_PAD_ID_PREFIX + exerciseId).html("").html(htmlSH);
 		}
 		
 		return html;

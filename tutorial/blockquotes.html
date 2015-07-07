@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/sweet-alert.css">
-  <link rel="stylesheet" href="../css/jquery.fullPage.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
   <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui-slider-pips.css">
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Favicon
@@ -39,10 +38,21 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="fullpage">
+  
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+			<li><a href="javascript:goToSlide(2);">3</a></li>
+			<li><a href="javascript:goToSlide(3);">4</a></li>
+		</ul>
+	</div>
+  </div>
 	
 	<div class="section blockquotes">
 		<!-- Blockquotes lesson. Intro Explanation  -->
-	    <div class="slide">
+	    <div class="slide active">
 			<div class="container">
 			  <div class="row">
 				<div class="twelve columns">
@@ -57,7 +67,8 @@
 					<h2>Blockquotes</h2>
 					<p>To create a blockquote, just start a line with the "greater than" character (&gt;) followed by a space (this is optional) and the text.<br/>
 					Blockquotes can be nested by adding additional levels of &gt;. They can also contain other Markdown formatting elements.</p>
-					<p>Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-no-touch">Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-touch">Click on the red points to know more. Move through the exercises by using the buttons or by swiping left or right.</p>
 					<p><button class="button-primary button-next">Start exercises</button></p>
 				</div>
 				<div class="eight columns">
@@ -65,7 +76,7 @@
 						<div class="cd-product-wrapper">
 							<img src="../images/06.1.png" alt=">First line of quoting >>Nested >Last line of quoting" />
 							<ul>
-								<li class="cd-single-point" style="top: 35%;left: 9%;">
+								<li class="cd-single-point" style="top: 32%;left: 9%;">
 									<a class="cd-img-replace" href="#">More</a>
 									<div class="cd-more-info cd-right">
 										<p>
@@ -74,7 +85,7 @@
 										<a href="#" class="cd-close-info cd-img-replace">Close</a>
 									</div>
 								</li> <!-- .cd-single-point -->
-								<li class="cd-single-point" style="top: 88%;left: 2%;">
+								<li class="cd-single-point" style="top: 68%;left: 5%;">
 									<a class="cd-img-replace" href="#">More</a>
 									<div class="cd-more-info cd-top">
 										<p>
@@ -102,20 +113,33 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_6-1" class="editor">The quote:
+					<textarea id="editor_6-1" class="editor">The quote:
 
 "Somewhere, something incredible is waiting to be known"
 
 Has been ascribed to Carl Sagan.
-</div>
-					<p><input id="ck_show_html_6-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_6-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_6-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_6-1" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_6-1" class="render-pad"></div>
-					<div id="html_pad_6-1" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -131,7 +155,7 @@ Has been ascribed to Carl Sagan.
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_6-2" class="editor">JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=. The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:
+					<textarea id="editor_6-2" class="editor">JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=. The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:
 
 '' == '0'           // false
 0 == ''             // true
@@ -142,15 +166,28 @@ false == '0'        // true
 
 false == undefined  // false
 false == null       // false
-null == undefined   // true</div>
-					<p><input id="ck_show_html_6-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+null == undefined   // true</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-2" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_6-2" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_6-2" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_6-2" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_6-2" class="render-pad"></div>
-					<div id="html_pad_6-2" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -172,14 +209,27 @@ null == undefined   // true</div>
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_6-3" class="editor"></div>
-					<p><input id="ck_show_html_6-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_6-3" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_6-3" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_6-3" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_6-3" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
 					<a href="paragraphs.html" id="btn_answer_6-3" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_6-3" class="render-pad"></div>
-					<div id="html_pad_6-3" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -196,11 +246,10 @@ null == undefined   // true</div>
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"  charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
   <script src="../js/sweet-alert.min.js"></script>
-  <script src="../js/jquery.slimscroll.min.js"></script>
-  <script src="../js/jquery.fullPage.min.js"></script>
   <script src="../js/nanobar.min.js"></script>
   <script src="../js/marked.js"></script>
   <script src="../js/snuownd.js"></script>

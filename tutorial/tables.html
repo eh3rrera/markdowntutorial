@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/sweet-alert.css">
-  <link rel="stylesheet" href="../css/jquery.fullPage.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
   <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui-slider-pips.css">
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Favicon
@@ -39,10 +38,22 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="fullpage">
+  
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+			<li><a href="javascript:goToSlide(2);">3</a></li>
+			<li><a href="javascript:goToSlide(3);">4</a></li>
+			<li><a href="javascript:goToSlide(4);">5</a></li>
+		</ul>
+	</div>
+  </div>
 	
 	<div class="section tables">
 		<!-- Tables lesson. Intro Explanation  -->
-	    <div class="slide">
+	    <div class="slide active">
 			<div class="container">
 			  <div class="row">
 				<div class="twelve columns">
@@ -59,7 +70,8 @@
 						Github and Reddit support creating tables by dividing the column headers (first row) with dashes (-) and separating each column with a pipe (|). Optionally, you can add extra pipes on the ends.<br/>
 						Also, by including colons (:) in the header row, you can define text to be left-aligned, right-aligned, or center-aligned.
 					</p>
-					<p>Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-no-touch">Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-touch">Click on the red points to know more. Move through the exercises by using the buttons or by swiping left or right.</p>
 					<p><button class="button-primary button-next">Start exercises</button></p>
 				</div>
 				<div class="eight columns">
@@ -119,15 +131,28 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_14-1" class="editor"></div>
-					<p><input id="ck_show_html_14-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_14-1" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_14-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_14-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_14-1" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_14-1" class="render-pad"></div>
-					<div id="html_pad_14-1" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -153,15 +178,28 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_14-2" class="editor"></div>
-					<p><input id="ck_show_html_14-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_14-2" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-2" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_14-2" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_14-2" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_14-2" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_14-2" class="render-pad"></div>
-					<div id="html_pad_14-2" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -199,15 +237,28 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_14-3" class="editor"></div>
-					<p><input id="ck_show_html_14-3" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_14-3" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-3" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_14-3" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_14-3" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_14-3" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_14-3" class="render-pad"></div>
-					<div id="html_pad_14-3" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -220,7 +271,7 @@
 				<div class="twelve columns">
 					<p>Play with the concepts you just learned!</p>
 					<p>For example: <br/>
-					Play with the optional pipes on the ends, what happens when you left some pipes on some columns? When you left the pipes on the beggining and delete the ones at the end?<br/>
+					Play with the optional pipes on the ends, what happens when you left some pipes on some columns? When you left the pipes on the beginning and delete the ones at the end?<br/>
 					Add other markdown elements to the rows of a table.</p>
 					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
 					</p>
@@ -228,14 +279,27 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_14-4" class="editor"></div>
-					<p><input id="ck_show_html_14-4" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_14-4" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_14-4" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_14-4" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_14-4" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
 					<a href="end.html" id="btn_answer_14-4" class="button button-primary button-next-lesson u-full-width">Go to the end</a></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_14-4" class="render-pad"></div>
-					<div id="html_pad_14-4" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -252,11 +316,10 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"  charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
   <script src="../js/sweet-alert.min.js"></script>
-  <script src="../js/jquery.slimscroll.min.js"></script>
-  <script src="../js/jquery.fullPage.min.js"></script>
   <script src="../js/nanobar.min.js"></script>
   <script src="../js/marked.js"></script>
   <script src="../js/snuownd.js"></script>

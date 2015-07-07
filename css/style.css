@@ -140,27 +140,172 @@ blockquote p {
 	border-top: 3px solid #E1E1E1;
 }
 
+p {
+	margin-bottom: 1.5em;
+}
+
+.container {
+	margin-top: 2em;
+}
+
+.instructions-no-touch, .instructions-touch{
+	display:none;
+}
+.no-touch .instructions-no-touch {
+	display: block;
+}.touch .instructions-touch {
+	display: block;
+}
+
 /* #To format the editors for the exercises
 ================================================== */
 .editor {
-	height: 200px;
+	width: 100%;
+	height: 11.7em;
 	border: 1px #666 solid;
-	font-size: 1em !important;
+	margin-bottom: 0em;
+}
+.editor, .html-pad {
+	font: 1em/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 .render-pad, .html-pad {
-	font-size: 0.9em !important;
+	font-size: 0.9em;
 	background: rgba(255, 255, 255, 0.9);
-	height: 200px;
+	height: 13em;
 	border: 1px #666 solid; 
 	overflow: auto;
-}
-.render-pad {
 	padding: 0.5em;
 }
-.html-pad {
-	margin-top: 10px; 
-	visibility: hidden;
+.html-pad { 
+	margin-bottom: 1.0em;
+	display: none;
 }
+.button-next, .button-next-lesson {
+	margin-bottom: 1.5em;
+}
+
+/* #Mobile modifications
+================================================== */
+@media (max-width: 737px) {
+	.editor{
+		height: 9em;
+	}
+	.render-pad, .html-pad {
+		height: 10em;
+	}
+}
+
+@media (min-width: 550px) {
+	.html-pad {
+		margin-top: 0.8em;
+		position: absolute;
+	}
+}
+
+/* #Fixed header and footer
+================================================== */
+#header, #footer{
+	position:fixed;
+	height: 40px;
+	display:block;
+	width: 100%;
+	background: rgba(255, 255, 255, 1.0);
+	z-index:9;
+	text-align:center;
+	color: #333;
+	padding: 15px 0 0 0;
+}
+
+#header{
+	top:0px;
+}
+#footer{
+	bottom:0px;
+}
+
+.touch #footer{
+	display:none;
+}
+
+/* #Slide Menu (adapted from http://tympanus.net/codrops/2014/01/21/dot-navigation-styles/)
+================================================== */
+.dotstyle ul {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dotstyle li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 16px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.dotstyle li a {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-indent: -999em; /* make the text accessible to screen readers */
+	cursor: pointer;
+	position: absolute;
+}
+
+.dotstyle li a:focus {
+	outline: none;
+}
+
+/* Individual styles and effects */
+
+/* Fill up */
+
+.dotstyle-fillup li a {
+	overflow: hidden;
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px black;
+	-webkit-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+}
+
+.dotstyle-fillup li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000;
+	box-shadow: 0 0 1px #000;
+	-webkit-transition: height 0.3s ease;
+	transition: height 0.3s ease;
+}
+
+.dotstyle-fillup li a:hover,
+.dotstyle-fillup li a:focus {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dotstyle-fillup li.current a::after {
+	height: 100%;
+}
+
 
 /* #To indent correctly nested elements in list
 ================================================== */
@@ -169,82 +314,4 @@ blockquote p {
 }
 .render-pad li > p:not(:first-child) { 
 	margin-left: 1em;
-}
-
-/* #To set up the final challenge
-================================================== */
-.challenge-container {
-	height: 13em;
-	overflow: hidden;
-	background: white;
-	margin-bottom: 10px;
-	margin: 1em auto;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.marquee {
-	top: 6em;
-    position: relative;
-    box-sizing: border-box;
-    font-size: 1.2em;
-}
-
-/* Make it move! */
-@-webkit-keyframes marquee {
-    0%   { top:   10em }
-    100% { top: -45em }
-}
-@-moz-keyframes marquee {
-    0%   { top:   10em }
-    100% { top: -45em }
-}
-@-o-keyframes marquee {
-    0%   { top:   10em }
-    100% { top: -45em }
-}
-@keyframes marquee {
-    0%   { top:   10em }
-    100% { top: -45em }
-}
-
-/* To make look pretty */
-.challenge-container:before, .challenge-container::before,
-.challenge-container:after,  .challenge-container::after {
-    left: 0;
-    z-index: 1;
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    width: 100%; height: 2em;
-    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
-}
-
-.challenge-container:after, .challenge-container::after {
-    bottom: 0;
-    transform: rotate(180deg);
-}
-
-.challenge-container:before, .challenge-container::before {
-    top: 0;
-}
-
-.finalExercise .editor {
-	height: 150px;
-	margin-bottom: 10px;
-}
-
-.finalExercise .render-pad {
-	height: 150px;
-	border: 0px;
-    font-size: 1.2em !important;
-}
-
-.ui-widget-content .ui-slider-handle.ui-state-default {
-	background: #222;
-	border-color: #222;
-}
-.ui-widget-content .ui-slider-handle.ui-state-hover{
-	background: #33C3F0;
-	border-color: #33C3F0;
 }

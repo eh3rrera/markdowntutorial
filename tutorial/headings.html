@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/sweet-alert.css">
-  <link rel="stylesheet" href="../css/jquery.fullPage.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
   <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui-slider-pips.css">
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Favicon
@@ -40,10 +39,20 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="fullpage">
   
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+			<li><a href="javascript:goToSlide(2);">3</a></li>
+		</ul>
+	</div>
+  </div>
+  
 	<!-- Headers lesson.  -->
 	<div class="section headings">
 		<!-- Heading lesson. Intro Explanation  -->
-	    <div class="slide">
+	    <div class="slide active">
 			<div class="container">
 			  <div class="row">
 				<div class="twelve columns">
@@ -56,8 +65,9 @@
 			  <div class="row">
 				<div class="four columns">
 					<h2>Headings</h2>
-					<p>Starting a line with a hash character will make the line a header. The number of hashs corresponds to the level of the header (one to six).</p>
-					<p>Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p>Starting a line with a hash character will make the line a header. The number of hashes corresponds to the level of the header (one to six).</p>
+					<p class="instructions-no-touch">Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-touch">Click on the red points to know more. Move through the exercises by using the buttons or by swiping left or right.</p>
 					<p><button class="button-primary button-next">Start exercises</button></p>
 				</div>
 				<div class="eight columns">
@@ -116,17 +126,30 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_2-1" class="editor">April 18, 1938
+					<textarea id="editor_2-1" class="editor">April 18, 1938
 
-Superman made his debut in Action Comics #1.</div>
-					<p><input id="ck_show_html_2-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+Superman made his debut in Action Comics #1.</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_2-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_2-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_2-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button id="btn_answer_2-1" class="button-primary button-answer">Show me the answer</button></p>
 					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
 					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_2-1" class="render-pad"></div>
-					<div id="html_pad_2-1" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -139,8 +162,8 @@ Superman made his debut in Action Comics #1.</div>
 				<div class="twelve columns">
 					<p>Play with the concepts you just learned!</p>
 					<p>For example: <br/>
-					What happens when you have more than six hash characters at the beggining of the line?<br/>
-					What happens when you surround the formatting characters (hashers, equals signs or dashes) with spaces?<br/>
+					What happens when you have more than six hash characters at the beginning of the line?<br/>
+					What happens when you surround the formatting characters (equals signs or dashes) with spaces? Or remove them (hashes)?<br/>
 					What happens when you use bold and italics in a header?</p>
 					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
 					Go to the next lesson when you're ready.
@@ -149,14 +172,29 @@ Superman made his debut in Action Comics #1.</div>
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_2-2" class="editor"></div>
-					<p><input id="ck_show_html_2-2" type="checkbox" class="show-html" /> Show generated HTML?</p>
-					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
-					<a href="links.html" id="btn_answer_2-2" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
+					<textarea id="editor_2-2" class="editor"></textarea>
 				</div>
 				<div class="six columns">
 					<div id="render_pad_2-2" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_2-2" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
 					<div id="html_pad_2-2" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
+					<a href="links.html" id="btn_answer_2-2" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -173,11 +211,10 @@ Superman made his debut in Action Comics #1.</div>
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"  charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
   <script src="../js/sweet-alert.min.js"></script>
-  <script src="../js/jquery.slimscroll.min.js"></script>
-  <script src="../js/jquery.fullPage.min.js"></script>
   <script src="../js/nanobar.min.js"></script>
   <script src="../js/marked.js"></script>
   <script src="../js/snuownd.js"></script>

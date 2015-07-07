@@ -22,11 +22,10 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="stylesheet" href="../css/sweet-alert.css">
-  <link rel="stylesheet" href="../css/jquery.fullPage.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
   <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui.min.css">
-  <link rel="stylesheet" href="../css/jquery-ui-slider-pips.css">
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Favicon
@@ -39,10 +38,19 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="fullpage">
+  
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+		</ul>
+	</div>
+  </div>
 	
 	<div class="section autolinking">
 		<!-- Autolinking lesson. Intro Explanation  -->
-	    <div class="slide">
+	    <div class="slide active">
 			<div class="container">
 			  <div class="row">
 				<div class="twelve columns">
@@ -58,7 +66,8 @@
 					<p>
 						Github and Reddit will autolink standard URLs so instead of using the common Markdown to format one (and if you don't need a link text or title), you can simply enter it to be turned into a link.
 					</p>
-					<p>Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-no-touch">Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-touch">Move through the exercises by using the buttons or by swiping left or right.</p>
 					<p><button class="button-primary button-next">Start exercises</button></p>
 				</div>
 				<div class="eight columns">
@@ -89,14 +98,27 @@
 			  </div>
 			  <div class="row">
 				<div class="six columns">
-					<div id="editor_10-1" class="editor"></div>
-					<p><input id="ck_show_html_10-1" type="checkbox" class="show-html" /> Show generated HTML?</p>
+					<textarea id="editor_10-1" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_10-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_10-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_10-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
 					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
 					<a href="strikethrough.html" id="btn_answer_10-1" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
 				</div>
 				<div class="six columns">
-					<div id="render_pad_10-1" class="render-pad"></div>
-					<div id="html_pad_10-1" class="html-pad"></div>
+					<!-- empty -->
 				</div>
 			  </div>
 			</div>
@@ -113,11 +135,10 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"  charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
   <script src="../js/sweet-alert.min.js"></script>
-  <script src="../js/jquery.slimscroll.min.js"></script>
-  <script src="../js/jquery.fullPage.min.js"></script>
   <script src="../js/nanobar.min.js"></script>
   <script src="../js/marked.js"></script>
   <script src="../js/snuownd.js"></script>

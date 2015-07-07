@@ -2,8 +2,6 @@
 
 Adapted from an article on CodyHouse (http://codyhouse.co/?p=258)
 
-Modules
-
 -------------------------------- */
 
 *, *:after, *:before {
@@ -45,12 +43,13 @@ Main components
 .cd-product-wrapper {
   display: inline-block;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 3em;
   width: 100%;
   max-width: 450px;
 }
 .cd-product-wrapper > img {
   display: block;
+  max-width: 100%;
 }
 
 .cd-product-wrapper  li {
@@ -152,7 +151,7 @@ Main components
   /* pulse effect no more active on visited elements */
   display: none;
 }
-/*@media only screen and (min-width: 600px) {*/
+@media only screen and (min-width: 737px) {
   .cd-single-point.is-open .cd-more-info.cd-left {
     right: 140%;
   }
@@ -165,7 +164,7 @@ Main components
   .cd-single-point.is-open .cd-more-info.cd-bottom {
     top: 140%;
   }
-/*}*/
+}
 
 @-webkit-keyframes cd-pulse {
   0% {
@@ -214,6 +213,31 @@ Main components
     box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
   }
 }
+
+.cd-single-point .cd-more-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: left;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3em 1em 1em;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+}
 .cd-single-point .cd-more-info::before {
   /* triangle next to the interest point description - hidden on mobile */
   content: '';
@@ -231,29 +255,16 @@ Main components
 .cd-single-point .cd-more-info p {
   color: #758eb1;
 }
-/*@media only screen and (min-width: 600px) {*/
+@media only screen and (min-width: 737px) {
   .cd-single-point .cd-more-info {
     position: absolute;
     width: 220px;
-    height: 240px;
-    padding: 1em;
+    height: inherit/* 240px */;
+    /* padding: 1em; */
     overflow-y: visible;
     line-height: 1.4;
     border-radius: 0.25em;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-	z-index: 3;
-	text-align: left;
-	background-color: rgba(255, 255, 255, 0.95);
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	-o-transform: scale(0.8);
-	transform: scale(0.8);
-	-webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
-	-moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
-	transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
   }
   .cd-single-point .cd-more-info::before {
     display: block;
@@ -330,8 +341,16 @@ Main components
   .cd-single-point .cd-more-info p {
     /* -- */
   }
-/*}*/
+}
 
+/* close the interest point description - only on mobile */
+.cd-close-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 44px;
+  width: 44px;
+}
 .cd-close-info::after, .cd-close-info:before {
   content: '';
   position: absolute;
@@ -360,8 +379,8 @@ Main components
   height: 16px;
   width: 2px;
 }
-/*@media only screen and (min-width: 600px) {*/
+@media only screen and (min-width: 737px) {
   .cd-close-info {
     display: none;
   }
-/*}*/
+}
