@@ -110,7 +110,7 @@ $(document).ready(function() {
 			
 			if(exercises[exerciseId] != undefined && md.trim() == exercises[exerciseId]["answer"]) {
 				if(exerciseId == "15-1") {
-					swal({title:"Excelect job!", text: "You are now a Markdown Master", type: "success"});
+					swal({title:"Excellent job!", text: "You are now a Markdown Master", type: "success"});
 				} else {
 					swal({title:"Good job!", text: "That's correct. Now you can go to the next exercise.", type: "success"});
 				}
@@ -129,7 +129,7 @@ $(document).ready(function() {
 		
 		// Set up click event for the button
 		$(this).on('click', function(event){
-			$("#" + EDITOR_ID_PREFIX + exerciseId).text(exercises[exerciseId]["correctMd"]);
+			$("#" + EDITOR_ID_PREFIX + exerciseId).val(exercises[exerciseId]["correctMd"]);
 			generateMd(exerciseId);
 		});
 	});
@@ -156,41 +156,26 @@ $(document).ready(function() {
 	function generateMd(exerciseId) {
 		var text = $("#" + EDITOR_ID_PREFIX + exerciseId).val();
 		var mdFlavour = configureExtensions(exerciseId);
+		var md;
 		
 		// Set up marked options
 		if(mdFlavour == GITHUB_MD) {
-			marked.setOptions({
-			  //renderer: new marked.Renderer(),
-			  gfm: true,
-			  tables: true,
-			  breaks: false,
-			  pedantic: false,
-			  sanitize: true,
-			  smartLists: false,
-			  smartypants: false,
+			md = window.markdownit({
+			  linkify: true,
 			  highlight: function(code, lang) {
 				var languageToDetect = typeof(lang) !== "undefined" ? lang.toLowerCase() : '';
 				return hljs.highlightAuto(code, [languageToDetect]).value;
 			  }
 			});
 		} else {
-			marked.setOptions({
-			  //renderer: new marked.Renderer(),
-			  gfm: false,
-			  tables: false,
-			  breaks: false,
-			  pedantic: false,
-			  sanitize: true,
-			  smartLists: false,
-			  smartypants: false
-			});
+			md = window.markdownit();
 		}
 		
 		var html = "";
 		if(mdFlavour == REDDIT_MD) {
 			html = SnuOwnd.getParser().render(text);
 		} else {
-			html = marked(text);
+			html = md.render(text);
 		}
 		$("#" + RENDER_PAD_ID_PREFIX + exerciseId).html("").html(html);
 		
