@@ -88,6 +88,17 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).parents('.cd-single-point').eq(0).removeClass('is-open').addClass('visited');
 	});
+	var interestPointsSlide = $(".slide:eq(0)");
+	interestPointsSlide.css("-webkit-tap-highlight-color", "transparent"); //To eliminate the flicker on iOS when tapping
+	interestPointsSlide.on('click', function(event){
+		event.preventDefault();
+		closeInterestPoint(event);
+	});
+	function closeInterestPoint(event) {
+		if( !$(event.target).is('.cd-single-point a') && !$(event.target).is('.cd-close-info')){
+			$('.cd-single-point.is-open').removeClass('is-open').addClass('visited');
+		}
+	}
 	
 	// Set up markdown editors
 	$('.editor').each(function() {

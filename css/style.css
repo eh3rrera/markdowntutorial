@@ -157,6 +157,17 @@ p {
 	display: block;
 }
 
+button.button-previous:before {
+	content: "\2190";
+	font-size: 1.3em;
+	margin-right: 1em;
+}
+button.button-next:after, a.button-next-lesson:after {
+	content: "\2192";
+	font-size: 1.3em;
+	margin-left: 1em;
+}
+
 /* #To format the editors for the exercises
 ================================================== */
 .editor {
